@@ -1,0 +1,107 @@
+@(message: String, fahrtForm: Form[Fahrt], status: String)
+
+@import helper._
+
+@main("TakeARide"){
+<div class="container">
+    <header>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/">
+                    <div class="container""><img src="@routes.Assets.at("images/Takearide.png")">
+                    </div> 
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    @if(status=="eingeloggt"){<li>
+                        <a href="/suche">Suche</a>
+                    </li>}
+
+                    @if(status=="eingeloggt"){<li>
+                        <a href="/anlegen">Anlegen</a>
+                    </li>}
+                    <li>
+                        <a href="/impressum">Impressum</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            @if(status=="ausgeloggt"){<li>
+                                <a href="/login">Login</a>
+                            </li>}
+                            @if(status=="eingeloggt"){
+                            <li><a href="/logout">Logout</a></li>
+                            }
+                            @if(status=="ausgeloggt"){<li>
+                                <a href="/registrierung">Registrieren</a>
+                            </li>}
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </header>
+
+    <!--Inhalt-->
+    <div class="container">
+        <div id="box1">
+            <h1>Anlegen</h1>
+
+            <!-- Anlegen Felder -->
+            @helper.form(action=routes.Application.fahrtAnlegen(), 'role -> "form") {
+
+            <div class="form-group">
+                @helper.inputText(fahrtForm("Startadresse"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "startadresse", '_showConstraints -> false)
+            </div>
+
+            <div class="form-group">
+                @helper.inputText(fahrtForm("Zieladresse"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "zieladresse", '_showConstraints -> false)
+            </div>
+
+            <div class="form-group">
+                @helper.inputText(fahrtForm("Zweitadresse"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "zweitadresse", '_showConstraints -> false)
+            </div>
+
+            <div class="form-group">
+                @helper.inputText(fahrtForm("Mitfahrer"), 'pattern -> "[0-9]+", 'class -> "form-control", 'id -> "mitfahrer", '_showConstraints -> false)
+            </div>
+
+            <div class="form-group">
+                @helper.inputText(fahrtForm("Datum"), 'class -> "form-control", 'id -> "datum", '_showConstraints -> false)
+            </div>
+
+            <input type="submit" value="Anlegen" class="btn btn-default">
+            }
+            <!-- Felder Ende -->
+        </div>
+    </div>
+    <!--Inhalt-Ende-->
+</div>
+<footer>
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div>
+            <p id="Copyright">
+                &copy Copyright by TakeARide
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+<script type="text/javascript" src="@routes.Assets.at("javascripts/datetimepicker-master/jquery.datetimepicker.js")"></script>
+<script type="text/javascript">
+    $('#datum').datetimepicker({
+        mask: '9999/19/39 29:59'
+    });
+</script>
+}

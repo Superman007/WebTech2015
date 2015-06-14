@@ -1,0 +1,34 @@
+body {
+    padding-top: 60px;
+}
+
+#box1
+{
+    padding: 90px 55px;
+}
+
+#Copyright
+{
+    padding-top: 17px;
+    padding-left:27px;
+    color: #999999;
+    font-size: 8pt;
+}
+
+#reg_starDescription{
+    color: #999999;
+}
+
+.navbar-fixed-top {
+    padding: 15px;
+    
+}
+
+.nav.navbar-nav{
+    padding-top: 8px;
+}
+
+.container img{
+    width: 150px;
+    height: auto;
+}
