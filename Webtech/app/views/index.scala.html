@@ -1,0 +1,79 @@
+@(message: String, status: String)
+
+@import helper._
+
+@main("TakeARide"){
+
+<div class="container">
+    <header>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/">
+                    <div class="container""><img src="@routes.Assets.at("images/Takearide.png")">
+                    </div> 
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    @if(status=="eingeloggt"){<li>
+                        <a href="/suche">Suche</a>
+                    </li>}
+
+                    @if(status=="eingeloggt"){<li>
+                        <a href="/anlegen">Anlegen</a>
+                    </li>}
+                    <li>
+                        <a href="/impressum">Impressum</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            @if(status=="ausgeloggt"){<li>
+                                <a href="/login">Login</a>
+                            </li>}
+                            @if(status=="eingeloggt"){
+                            <li><a href="/logout">Logout</a></li>
+                            }
+                            @if(status=="ausgeloggt"){<li>
+                                <a href="/registrierung">Registrieren</a>
+                            </li>}
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!--Inhalt-->
+    <div class="container">
+        <div id="box1">
+            <h1>Herzlich Willkommen</h1>
+            <p class="lead">
+                Um eine Fahrt suchen oder anlegen zu koennen, muessen Sie sich registrieren.
+            </p>
+        </div>
+    </div>
+    <!--Inhalt-Ende-->
+</div>
+<footer>
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div>
+            <p id="Copyright">
+                &copy Copyright by TakeARide
+            </p>
+        </div>
+    </div>
+</footer>
+}

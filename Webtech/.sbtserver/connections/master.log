@@ -1,0 +1,34 @@
+New log file opened at Sun Jun 14 23:31:52 CEST 2015 by 1665@Ermans-Air.fritz.box
+Taking next connection to: 50455
+New client attempting to connect on port: 50456-50455
+  Address = /192.168.178.49:50455
+This client on port 50456 has uuid 30ff9900-d7d2-4a9f-8de7-dd631b4045ef configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-30ff9900-d7d2-4a9f-8de7-dd631b4045ef
+Taking next connection to: 50455
+New client attempting to connect on port: 50459-50455
+  Address = /192.168.178.49:50455
+Handshake exception on socket: 50459
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 50455
+New client attempting to connect on port: 50460-50455
+  Address = /192.168.178.49:50455
+This client on port 50460 has uuid 45886d53-71fb-40e1-beae-8000220670d0 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-30ff9900-d7d2-4a9f-8de7-dd631b4045ef, play-fork-run-45886d53-71fb-40e1-beae-8000220670d0
+Taking next connection to: 50455
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 50455
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 1665@Ermans-Air.fritz.box logs at Sun Jun 14 23:38:40 CEST 2015, goodbye.

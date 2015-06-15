@@ -1,0 +1,159 @@
+@(message: String, fahrtForm: Form[Fahrt], status: String, fahrtListe: List[Fahrt])
+
+@import helper._
+
+@main("TakeARide"){
+<div class="container">
+    <header>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/">
+                    <div class="container""><img src="@routes.Assets.at("images/Takearide.png")">
+                    </div> 
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    @if(status=="eingeloggt"){<li>
+                        <a href="/suche">Suche</a>
+                    </li>}
+
+                    @if(status=="eingeloggt"){<li>
+                        <a href="/anlegen">Anlegen</a>
+                    </li>}
+                    <li>
+                        <a href="/impressum">Impressum</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            @if(status=="ausgeloggt"){<li>
+                                <a href="/login">Login</a>
+                            </li>}
+                            @if(status=="eingeloggt"){
+                            <li><a href="/logout">Logout</a></li>
+                            }
+                            @if(status=="ausgeloggt"){<li>
+                                <a href="/registrierung">Registrieren</a>
+                            </li>}
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </header>
+
+    <!--Inhalt-->
+    <div class="container">
+        <div id="box1">
+            <h1>Suche</h1>
+            <!-- Suchen Felder -->
+            @helper.form(action=routes.Application.fahrtSuchen(), 'role -> "form" ,'id -> "suchenForm") {
+
+            <div class="form-group">
+                @helper.inputText(fahrtForm("Startadresse"), 'class -> "form-control", 'id -> "startadresse", '_showConstraints -> false)
+            </div>
+
+            <div class="form-group">
+                @helper.inputText(fahrtForm("Zieladresse"), 'class -> "form-control", 'id -> "zieladresse", '_showConstraints -> false)
+            </div>
+
+            <div class="form-group">
+                @helper.inputText(fahrtForm("Datum"), 'class -> "form-control", 'id -> "datum", '_showConstraints -> false)
+            </div>
+            <!-- DateTimePickerEnd -->
+            <input type="submit" id="suchen" class="btn btn-default" value="Suchen">
+            }
+            <div class ="form-group">
+
+            </div>
+            <!-- Felder Ende -->
+            <!-- Suche Anfang -->
+            @for(fahrt <- fahrtListe){
+
+            <div class ="form-group">
+                <li>
+                    Startadresse: @fahrt.getStartAdresse()<br>
+                    Zieladresse: @fahrt.getZielAdresse() <br>
+                    Ueber: @fahrt.getZweitAdresse() <br>
+                    Freie Plaetze: @fahrt.freiePlaetze(fahrt) <br>
+                    Datum: @fahrt.getDatum()
+                </li>
+            </div>
+            <button onclick="buchen(@fahrt.getId())" class="btn btn-default">Buchen</button>
+
+            <!-- Suche Ende -->
+            }
+        </div>
+    </div>
+
+    <!--Inhalt-Ende-->
+</div>
+<footer>
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div>
+            <p id="Copyright">
+                &copy Copyright by TakeARide
+            </p>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="@routes.Assets.at("javascripts/datetimepicker-master/jquery.datetimepicker.js")"></script>
+<script type="text/javascript">
+                $('#datum').datetimepicker({
+                    mask: '9999/19/39 29:59'
+                });</script>
+<script type="text/javascript">
+    var webSocket;
+    $(function() {
+        var WS = window["MozWebSocket"] ? MozWebSocket : WebSocket;
+        webSocket = new WS("@routes.Socket.getData().webSocketURL(request)");
+        webSocket.onmessage = receiveEvent;
+    });
+    function buchen(id) {
+        webSocket.send("" + id);
+    };
+    
+    function receiveEvent(event) {
+        if (event.data == "reload") {
+            document.getElementById("suchenForm").submit();
+        } else {
+            window.location = "@routes.Application.suche()";
+        }
+    };
+</script>
+
+<script>
+    function loadIt() {
+        var daten = {
+            "startAdresse": document.getElementById("startadresse").value,
+            "zielAdresse": document.getElementById("zieladresse").value,
+            "datum": document.getElementById("datum").value
+        };
+
+
+        $.ajax({
+            url: "/suche",
+            type: "POST",
+            dataType: "text",
+            data: daten,
+            success: function(daten) {
+                $("#ausgeben").html(daten);
+            }
+        });
+    }
+</script>
+
+
+}
