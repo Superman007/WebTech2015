@@ -1,13 +1,13 @@
-New log file opened at Sun Jun 14 23:31:52 CEST 2015 by 1665@Ermans-Air.fritz.box
-Taking next connection to: 50455
-New client attempting to connect on port: 50456-50455
-  Address = /192.168.178.49:50455
-This client on port 50456 has uuid 30ff9900-d7d2-4a9f-8de7-dd631b4045ef configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
-Connected Clients: activator-30ff9900-d7d2-4a9f-8de7-dd631b4045ef
-Taking next connection to: 50455
-New client attempting to connect on port: 50459-50455
-  Address = /192.168.178.49:50455
-Handshake exception on socket: 50459
+New log file opened at Mon Jun 15 14:19:16 CEST 2015 by 829@Philipps-MacBook-Air.local
+Taking next connection to: 52863
+New client attempting to connect on port: 52864-52863
+  Address = /127.0.0.1:52863
+This client on port 52864 has uuid 59226f0c-eec8-486b-b793-af3ed98c33d1 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-59226f0c-eec8-486b-b793-af3ed98c33d1
+Taking next connection to: 52863
+New client attempting to connect on port: 52868-52863
+  Address = /127.0.0.1:52863
+Handshake exception on socket: 52868
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
@@ -17,18 +17,15 @@ Caused by: java.io.EOFException
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 50455
-New client attempting to connect on port: 50460-50455
-  Address = /192.168.178.49:50455
-This client on port 50460 has uuid 45886d53-71fb-40e1-beae-8000220670d0 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-30ff9900-d7d2-4a9f-8de7-dd631b4045ef, play-fork-run-45886d53-71fb-40e1-beae-8000220670d0
-Taking next connection to: 50455
+Taking next connection to: 52863
+New client attempting to connect on port: 52869-52863
+  Address = /127.0.0.1:52863
+This client on port 52869 has uuid d45d652c-f159-4fd7-b45b-0cc71162701d configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-59226f0c-eec8-486b-b793-af3ed98c33d1, play-fork-run-d45d652c-f159-4fd7-b45b-0cc71162701d
+Taking next connection to: 52863
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 50455
+Taking next connection to: 52863
 Checking to see if clients are empty...
-No non-daemon clients connected after 3 min. Shutting down.
-Server socket thread exiting.
-0 clients open, will close them...
-All client sockets have been closed.
-Closing the 1665@Ermans-Air.fritz.box logs at Sun Jun 14 23:38:40 CEST 2015, goodbye.
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 52863

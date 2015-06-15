@@ -62,15 +62,15 @@
             @helper.form(action=routes.Application.fahrtSuchen(), 'role -> "form" ,'id -> "suchenForm") {
 
             <div class="form-group">
-                @helper.inputText(fahrtForm("Startadresse"), 'class -> "form-control", 'id -> "startadresse", '_showConstraints -> false)
+                @helper.inputText(fahrtForm("startAdresse"), 'class -> "form-control", 'id -> "startadresse", '_showConstraints -> false)
             </div>
 
             <div class="form-group">
-                @helper.inputText(fahrtForm("Zieladresse"), 'class -> "form-control", 'id -> "zieladresse", '_showConstraints -> false)
+                @helper.inputText(fahrtForm("zielAdresse"), 'class -> "form-control", 'id -> "zieladresse", '_showConstraints -> false)
             </div>
 
             <div class="form-group">
-                @helper.inputText(fahrtForm("Datum"), 'class -> "form-control", 'id -> "datum", '_showConstraints -> false)
+                @helper.inputText(fahrtForm("datum"), 'class -> "form-control", 'id -> "datum", '_showConstraints -> false)
             </div>
             <!-- DateTimePickerEnd -->
             <input type="submit" id="suchen" class="btn btn-default" value="Suchen">
@@ -133,6 +133,20 @@
         }
     };
 </script>
+<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkNEdEbvin0IJRl2si8FQmqd2uYJt-y3w">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat: -34.397, lng: 150.644},
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 
 <script>
     function loadIt() {

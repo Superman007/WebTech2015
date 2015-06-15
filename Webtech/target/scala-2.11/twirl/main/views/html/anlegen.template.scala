@@ -89,23 +89,23 @@ Seq[Any](format.raw/*1.59*/("""
             """),_display_(/*62.14*/helper/*62.20*/.form(action=routes.Application.fahrtAnlegen(), 'role -> "form")/*62.84*/ {_display_(Seq[Any](format.raw/*62.86*/("""
 
             """),format.raw/*64.13*/("""<div class="form-group">
-                """),_display_(/*65.18*/helper/*65.24*/.inputText(fahrtForm("Startadresse"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "startadresse", '_showConstraints -> false)),format.raw/*65.213*/("""
+                """),_display_(/*65.18*/helper/*65.24*/.inputText(fahrtForm("startAdresse"), 'placeholder -> "Nur Groß- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "startadresse", '_showConstraints -> false)),format.raw/*65.212*/("""
             """),format.raw/*66.13*/("""</div>
 
             <div class="form-group">
-                """),_display_(/*69.18*/helper/*69.24*/.inputText(fahrtForm("Zieladresse"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "zieladresse", '_showConstraints -> false)),format.raw/*69.211*/("""
+                """),_display_(/*69.18*/helper/*69.24*/.inputText(fahrtForm("zielAdresse"), 'placeholder -> "Nur Groß- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "zieladresse", '_showConstraints -> false)),format.raw/*69.210*/("""
             """),format.raw/*70.13*/("""</div>
 
             <div class="form-group">
-                """),_display_(/*73.18*/helper/*73.24*/.inputText(fahrtForm("Zweitadresse"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "zweitadresse", '_showConstraints -> false)),format.raw/*73.213*/("""
+                """),_display_(/*73.18*/helper/*73.24*/.inputText(fahrtForm("zweitAdresse"), 'placeholder -> "Nur Groß- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "zweitadresse", '_showConstraints -> false)),format.raw/*73.212*/("""
             """),format.raw/*74.13*/("""</div>
 
             <div class="form-group">
-                """),_display_(/*77.18*/helper/*77.24*/.inputText(fahrtForm("Mitfahrer"), 'pattern -> "[0-9]+", 'class -> "form-control", 'id -> "mitfahrer", '_showConstraints -> false)),format.raw/*77.154*/("""
+                """),_display_(/*77.18*/helper/*77.24*/.inputText(fahrtForm("mitfahrer"), 'pattern -> "[0-9]+", 'class -> "form-control", 'id -> "mitfahrer", '_showConstraints -> false)),format.raw/*77.154*/("""
             """),format.raw/*78.13*/("""</div>
 
             <div class="form-group">
-                """),_display_(/*81.18*/helper/*81.24*/.inputText(fahrtForm("Datum"), 'class -> "form-control", 'id -> "datum", '_showConstraints -> false)),format.raw/*81.124*/("""
+                """),_display_(/*81.18*/helper/*81.24*/.inputText(fahrtForm("datum"), 'class -> "form-control", 'id -> "datum", '_showConstraints -> false)),format.raw/*81.124*/("""
             """),format.raw/*82.13*/("""</div>
 
             <input type="submit" value="Anlegen" class="btn btn-default">
@@ -143,10 +143,10 @@ Seq[Any](format.raw/*1.59*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 14 23:16:04 CEST 2015
-                  SOURCE: /Users/Erman/Desktop/Webtech/app/views/anlegen.scala.html
-                  HASH: b00972a22cd38614da10fa367af7be412d0483eb
-                  MATRIX: 744->1|904->58|932->77|959->79|984->96|1022->97|1049->98|1592->614|1607->620|1662->654|1985->950|2018->974|2057->975|2170->1057|2220->1080|2253->1104|2292->1105|2409->1191|2458->1212|2810->1537|2843->1561|2882->1562|3011->1660|3068->1690|3101->1714|3140->1715|3197->1744|3295->1811|3352->1841|3385->1865|3424->1866|3568->1979|3621->2004|3902->2258|3917->2264|3990->2328|4030->2330|4072->2344|4141->2386|4156->2392|4367->2581|4408->2594|4497->2656|4512->2662|4721->2849|4762->2862|4851->2924|4866->2930|5077->3119|5118->3132|5207->3194|5222->3200|5374->3330|5415->3343|5504->3405|5519->3411|5641->3511|5682->3524|5808->3619|5849->3632|6211->3966|6227->3972|6322->4044|6426->4119|6456->4120|6493->4129|6550->4158|6579->4159
+                  DATE: Mon Jun 15 16:35:10 CEST 2015
+                  SOURCE: /Users/philippkoppenhagen/Documents/Webtech/app/views/anlegen.scala.html
+                  HASH: a563a9e6af1fa21ba0b77a4e7b6481ceb539cef9
+                  MATRIX: 744->1|904->58|932->77|959->79|984->96|1022->97|1049->98|1592->614|1607->620|1662->654|1985->950|2018->974|2057->975|2170->1057|2220->1080|2253->1104|2292->1105|2409->1191|2458->1212|2810->1537|2843->1561|2882->1562|3011->1660|3068->1690|3101->1714|3140->1715|3197->1744|3295->1811|3352->1841|3385->1865|3424->1866|3568->1979|3621->2004|3902->2258|3917->2264|3990->2328|4030->2330|4072->2344|4141->2386|4156->2392|4366->2580|4407->2593|4496->2655|4511->2661|4719->2847|4760->2860|4849->2922|4864->2928|5074->3116|5115->3129|5204->3191|5219->3197|5371->3327|5412->3340|5501->3402|5516->3408|5638->3508|5679->3521|5805->3616|5846->3629|6208->3963|6224->3969|6319->4041|6423->4116|6453->4117|6490->4126|6547->4155|6576->4156
                   LINES: 26->1|29->1|31->4|32->5|32->5|32->5|33->6|43->16|43->16|43->16|52->25|52->25|52->25|54->27|56->29|56->29|56->29|58->31|59->32|65->38|65->38|65->38|67->40|68->41|68->41|68->41|69->42|70->43|71->44|71->44|71->44|73->46|74->47|89->62|89->62|89->62|89->62|91->64|92->65|92->65|92->65|93->66|96->69|96->69|96->69|97->70|100->73|100->73|100->73|101->74|104->77|104->77|104->77|105->78|108->81|108->81|108->81|109->82|112->85|113->86|128->101|128->101|128->101|130->103|130->103|131->104|132->105|132->105
                   -- GENERATED --
               */

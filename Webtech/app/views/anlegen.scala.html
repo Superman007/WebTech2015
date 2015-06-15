@@ -62,23 +62,23 @@
             @helper.form(action=routes.Application.fahrtAnlegen(), 'role -> "form") {
 
             <div class="form-group">
-                @helper.inputText(fahrtForm("Startadresse"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "startadresse", '_showConstraints -> false)
+                @helper.inputText(fahrtForm("startAdresse"), 'placeholder -> "Nur Groß- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "startadresse", '_showConstraints -> false)
             </div>
 
             <div class="form-group">
-                @helper.inputText(fahrtForm("Zieladresse"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "zieladresse", '_showConstraints -> false)
+                @helper.inputText(fahrtForm("zielAdresse"), 'placeholder -> "Nur Groß- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "zieladresse", '_showConstraints -> false)
             </div>
 
             <div class="form-group">
-                @helper.inputText(fahrtForm("Zweitadresse"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "zweitadresse", '_showConstraints -> false)
+                @helper.inputText(fahrtForm("zweitAdresse"), 'placeholder -> "Nur Groß- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "zweitadresse", '_showConstraints -> false)
             </div>
 
             <div class="form-group">
-                @helper.inputText(fahrtForm("Mitfahrer"), 'pattern -> "[0-9]+", 'class -> "form-control", 'id -> "mitfahrer", '_showConstraints -> false)
+                @helper.inputText(fahrtForm("mitfahrer"), 'pattern -> "[0-9]+", 'class -> "form-control", 'id -> "mitfahrer", '_showConstraints -> false)
             </div>
 
             <div class="form-group">
-                @helper.inputText(fahrtForm("Datum"), 'class -> "form-control", 'id -> "datum", '_showConstraints -> false)
+                @helper.inputText(fahrtForm("datum"), 'class -> "form-control", 'id -> "datum", '_showConstraints -> false)
             </div>
 
             <input type="submit" value="Anlegen" class="btn btn-default">

@@ -89,11 +89,11 @@ Seq[Any](format.raw/*1.57*/("""
             """),_display_(/*62.14*/helper/*62.20*/.form(action=routes.Application.einloggen(), 'role -> "form")/*62.81*/ {_display_(Seq[Any](format.raw/*62.83*/("""
             
             """),format.raw/*64.13*/("""<div class="form-group">
-                """),_display_(/*65.18*/helper/*65.24*/.inputText(userForm("Username"), 'class -> "form-control", 'id -> "log_username", '_showConstraints -> false)),format.raw/*65.133*/("""
+                """),_display_(/*65.18*/helper/*65.24*/.inputText(userForm("username"), 'class -> "form-control", 'id -> "log_username", '_showConstraints -> false)),format.raw/*65.133*/("""
             """),format.raw/*66.13*/("""</div>
             
             <div class="form-group">
-                """),_display_(/*69.18*/helper/*69.24*/.inputPassword(userForm("Passwort"), 'class -> "form-control", 'id -> "log_passwort", '_showConstraints -> false)),format.raw/*69.137*/("""
+                """),_display_(/*69.18*/helper/*69.24*/.inputPassword(userForm("passwort"), 'class -> "form-control", 'id -> "log_passwort", '_showConstraints -> false)),format.raw/*69.137*/("""
             """),format.raw/*70.13*/("""</div>
 
             <div>
@@ -130,9 +130,9 @@ Seq[Any](format.raw/*1.57*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 14 23:16:04 CEST 2015
-                  SOURCE: /Users/Erman/Desktop/Webtech/app/views/login.scala.html
-                  HASH: 683180a1f1dfc8f75d9bec5947568cb36f80e38d
+                  DATE: Thu May 21 17:01:39 CEST 2015
+                  SOURCE: /Users/philippkoppenhagen/Documents/Webtech/app/views/login.scala.html
+                  HASH: 7e5c2f66077eb16055ab8b2cf7cbaed27d531063
                   MATRIX: 741->1|899->56|927->75|954->77|979->94|1017->95|1044->96|1587->612|1602->618|1657->652|2001->969|2034->993|2073->994|2186->1076|2236->1099|2269->1123|2308->1124|2425->1210|2474->1231|2826->1556|2859->1580|2898->1581|3027->1679|3084->1709|3117->1733|3156->1734|3213->1763|3311->1830|3368->1860|3401->1884|3440->1885|3584->1998|3637->2023|3913->2272|3928->2278|3998->2339|4038->2341|4092->2367|4161->2409|4176->2415|4307->2524|4348->2537|4449->2611|4464->2617|4599->2730|4640->2743|4895->2967|4936->2980
                   LINES: 26->1|29->1|31->4|32->5|32->5|32->5|33->6|43->16|43->16|43->16|53->26|53->26|53->26|55->28|57->30|57->30|57->30|59->32|60->33|66->39|66->39|66->39|68->41|69->42|69->42|69->42|70->43|71->44|72->45|72->45|72->45|74->47|75->48|89->62|89->62|89->62|89->62|91->64|92->65|92->65|92->65|93->66|96->69|96->69|96->69|97->70|104->77|105->78
                   -- GENERATED --

@@ -90,27 +90,27 @@ Seq[Any](format.raw/*1.57*/("""
             """),_display_(/*63.14*/helper/*63.20*/.form(action=routes.Application.registrieren(), 'role -> "form")/*63.84*/ {_display_(Seq[Any](format.raw/*63.86*/("""
 
             """),format.raw/*65.13*/("""<div class="form-group">
-                """),_display_(/*66.18*/helper/*66.24*/.inputText(userForm("Username"), 'class -> "form-control", 'id -> "reg_username", '_showConstraints -> true)),format.raw/*66.132*/("""                    
+                """),_display_(/*66.18*/helper/*66.24*/.inputText(userForm("username"), 'class -> "form-control", 'id -> "reg_username", '_showConstraints -> true)),format.raw/*66.132*/("""                    
             """),format.raw/*67.13*/("""</div>
 
             <div class="form-group">
-                """),_display_(/*70.18*/helper/*70.24*/.inputText(userForm("Vorname"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "reg_vorname")),format.raw/*70.178*/("""               
+                """),_display_(/*70.18*/helper/*70.24*/.inputText(userForm("vorname"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "reg_vorname")),format.raw/*70.178*/("""               
             """),format.raw/*71.13*/("""</div>
 
             <div class="form-group">
-                """),_display_(/*74.18*/helper/*74.24*/.inputText(userForm("Nachname"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "reg_nachname")),format.raw/*74.180*/("""                    
+                """),_display_(/*74.18*/helper/*74.24*/.inputText(userForm("nachname"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "reg_nachname")),format.raw/*74.180*/("""                    
             """),format.raw/*75.13*/("""</div>
 
             <div class="form-group">
-                """),_display_(/*78.18*/helper/*78.24*/.inputText(userForm("Ort"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "reg_ort")),format.raw/*78.170*/("""                    
+                """),_display_(/*78.18*/helper/*78.24*/.inputText(userForm("ort"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "reg_ort")),format.raw/*78.170*/("""                    
             """),format.raw/*79.13*/("""</div>
 
             <div class="form-group">
-                """),_display_(/*82.18*/helper/*82.24*/.inputText(userForm("Email"), 'placeholder -> "lorem@ipsum.net",'class -> "form-control", 'id -> "reg_email", '_showConstraints -> false)),format.raw/*82.161*/("""                    
+                """),_display_(/*82.18*/helper/*82.24*/.inputText(userForm("email"), 'placeholder -> "lorem@ipsum.net",'class -> "form-control", 'id -> "reg_email", '_showConstraints -> false)),format.raw/*82.161*/("""                    
             """),format.raw/*83.13*/("""</div>
 
             <div class="form-group">
-                """),_display_(/*86.18*/helper/*86.24*/.inputPassword(userForm("Passwort"), 'class -> "form-control", 'id -> "reg_passwort", '_showConstraints -> true)),format.raw/*86.136*/("""                    
+                """),_display_(/*86.18*/helper/*86.24*/.inputPassword(userForm("passwort"), 'class -> "form-control", 'id -> "reg_passwort", '_showConstraints -> true)),format.raw/*86.136*/("""                    
             """),format.raw/*87.13*/("""</div>
             <input type="submit" value="registrieren" class="btn btn-primary">
             """)))}),format.raw/*89.14*/("""
@@ -143,9 +143,9 @@ Seq[Any](format.raw/*1.57*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Sun Jun 14 23:27:18 CEST 2015
-                  SOURCE: /Users/Erman/Desktop/Webtech/app/views/registrierung.scala.html
-                  HASH: 318e7146ebef50bd381a97736ad89c273686eeba
+                  DATE: Thu May 21 17:01:39 CEST 2015
+                  SOURCE: /Users/philippkoppenhagen/Documents/Webtech/app/views/registrierung.scala.html
+                  HASH: eaa48cd1b7c84a73683ec755b9b77e1d3790b41f
                   MATRIX: 749->1|907->56|935->75|962->77|987->94|1025->95|1052->96|1595->612|1610->618|1665->652|2009->969|2042->993|2081->994|2194->1076|2244->1099|2277->1123|2316->1124|2433->1210|2482->1231|2834->1556|2867->1580|2906->1581|3035->1679|3092->1709|3125->1733|3164->1734|3221->1763|3319->1830|3376->1860|3409->1884|3448->1885|3592->1998|3645->2023|3937->2288|3952->2294|4025->2358|4065->2360|4107->2374|4176->2416|4191->2422|4321->2530|4382->2563|4471->2625|4486->2631|4662->2785|4718->2813|4807->2875|4822->2881|5000->3037|5061->3070|5150->3132|5165->3138|5333->3284|5394->3317|5483->3379|5498->3385|5657->3522|5718->3555|5807->3617|5822->3623|5956->3735|6017->3768|6147->3867|6189->3881
                   LINES: 26->1|29->1|31->4|32->5|32->5|32->5|33->6|43->16|43->16|43->16|53->26|53->26|53->26|55->28|57->30|57->30|57->30|59->32|60->33|66->39|66->39|66->39|68->41|69->42|69->42|69->42|70->43|71->44|72->45|72->45|72->45|74->47|75->48|90->63|90->63|90->63|90->63|92->65|93->66|93->66|93->66|94->67|97->70|97->70|97->70|98->71|101->74|101->74|101->74|102->75|105->78|105->78|105->78|106->79|109->82|109->82|109->82|110->83|113->86|113->86|113->86|114->87|116->89|118->91
                   -- GENERATED --

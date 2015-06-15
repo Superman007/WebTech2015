@@ -63,27 +63,27 @@
             @helper.form(action=routes.Application.registrieren(), 'role -> "form") {
 
             <div class="form-group">
-                @helper.inputText(userForm("Username"), 'class -> "form-control", 'id -> "reg_username", '_showConstraints -> true)                    
+                @helper.inputText(userForm("username"), 'class -> "form-control", 'id -> "reg_username", '_showConstraints -> true)                    
             </div>
 
             <div class="form-group">
-                @helper.inputText(userForm("Vorname"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "reg_vorname")               
+                @helper.inputText(userForm("vorname"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "reg_vorname")               
             </div>
 
             <div class="form-group">
-                @helper.inputText(userForm("Nachname"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "reg_nachname")                    
+                @helper.inputText(userForm("nachname"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "reg_nachname")                    
             </div>
 
             <div class="form-group">
-                @helper.inputText(userForm("Ort"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "reg_ort")                    
+                @helper.inputText(userForm("ort"), 'placeholder -> "Nur Gross- und Kleinbuchstaben", 'pattern -> "[a-zA-Z]+", 'class -> "form-control", 'id -> "reg_ort")                    
             </div>
 
             <div class="form-group">
-                @helper.inputText(userForm("Email"), 'placeholder -> "lorem@ipsum.net",'class -> "form-control", 'id -> "reg_email", '_showConstraints -> false)                    
+                @helper.inputText(userForm("email"), 'placeholder -> "lorem@ipsum.net",'class -> "form-control", 'id -> "reg_email", '_showConstraints -> false)                    
             </div>
 
             <div class="form-group">
-                @helper.inputPassword(userForm("Passwort"), 'class -> "form-control", 'id -> "reg_passwort", '_showConstraints -> true)                    
+                @helper.inputPassword(userForm("passwort"), 'class -> "form-control", 'id -> "reg_passwort", '_showConstraints -> true)                    
             </div>
             <input type="submit" value="registrieren" class="btn btn-primary">
             }

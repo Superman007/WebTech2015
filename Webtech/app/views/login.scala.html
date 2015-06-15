@@ -62,11 +62,11 @@
             @helper.form(action=routes.Application.einloggen(), 'role -> "form") {
             
             <div class="form-group">
-                @helper.inputText(userForm("Username"), 'class -> "form-control", 'id -> "log_username", '_showConstraints -> false)
+                @helper.inputText(userForm("username"), 'class -> "form-control", 'id -> "log_username", '_showConstraints -> false)
             </div>
             
             <div class="form-group">
-                @helper.inputPassword(userForm("Passwort"), 'class -> "form-control", 'id -> "log_passwort", '_showConstraints -> false)
+                @helper.inputPassword(userForm("passwort"), 'class -> "form-control", 'id -> "log_passwort", '_showConstraints -> false)
             </div>
 
             <div>
